@@ -32,7 +32,10 @@ export INTERNAL_IP
 
 # Switch to the container's working directory
 cd /home/container || exit 1
-
+if [ -s .fex-emu ]
+then
+FEXRootFSFetcher -x -y
+fi
 # Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
 # variable format of "${VARIABLE}" before evaluating the string and automatically
 # replacing the values.
