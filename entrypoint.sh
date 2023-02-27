@@ -32,7 +32,7 @@ export INTERNAL_IP
 
 # Switch to the container's working directory
 cd /home/container || exit 1
-if [ -f .fex-emu/RootFS ]; then
+if [ -f .fex-emu/RootFS ] then
 FEXRootFSFetcher -x -y
 fi
 # Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
