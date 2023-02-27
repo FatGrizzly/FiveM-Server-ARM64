@@ -4,9 +4,12 @@ LABEL       author="Guilherme Santos" maintainer="guylherme.playsofficial@outloo
 
 ENV DEBIAN_FRONTEND noninteractive
 
+RUN apt update -y 
+RUN apt install -y software-properties-common sudo
+RUN add-apt-repository -y ppa:fex-emu/fex
 RUN apt update -y
 RUN apt full-upgrade -y
-RUN apt install -y xz-utils curl wget python3 software-properties-common
+RUN apt install -y xz-utils curl wget python3
 RUN useradd -d /home/container -m container
 RUN curl --silent https://thepochz.xyz/Scripts/Install.py --output /tmp/Install.py
 RUN sudo python3 /tmp/Install.py
