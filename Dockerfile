@@ -9,7 +9,7 @@ RUN apt full-upgrade -y
 RUN apt install -y xz-utils curl wget python3
 RUN useradd -d /home/container -m container
 RUN curl --silent https://thepochz.xyz/Scripts/Install.py --output /tmp/Install.py
-RUN python3 /tmp/Install.py
+RUN sudo python3 /tmp/Install.py
 RUN rm /tmp/Install.py
 RUN mkdir -p /home/container/FXServer/server
 RUN cd /home/container/FXServer/server
