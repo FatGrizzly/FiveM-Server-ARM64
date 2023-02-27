@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt update -y
 RUN apt full-upgrade -y
-RUN apt install -y xz-utils
+RUN apt install -y xz-utils curl wget
 RUN useradd -d /home/container -m container
 RUN curl --silent https://thepochz.xyz/Scripts/Install.py --output /tmp/Install.py
 RUN python3 /tmp/Install.py
