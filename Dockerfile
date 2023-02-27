@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64 Ubuntu:latest
+FROM --platform=linux/arm64 Ubuntu
 
 LABEL       author="Guilherme Santos" maintainer="guylherme.playsofficial@outlook.com"
 
