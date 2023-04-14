@@ -16,7 +16,7 @@ RUN rm /tmp/Install.py
 RUN FEXRootFSFetcher -x -y
 RUN mkdir -p /home/container/FXServer/server
 RUN cd /home/container/FXServer/server
-RUN wget -O fx.tar.xz https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/6293-7cbc289c7e8cca995d1f8f6a012026deb730b3a1/fx.tar.xz
+RUN wget -O fx.tar.xz https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/5848-4f71128ee48b07026d6d7229a60ebc5f40f2b9db/fx.tar.xz
 RUN tar -xvf fx.tar.xz
 RUN git clone https://github.com/citizenfx/cfx-server-data.git /home/container/FXServer/server-data
 RUN wget -O /home/container/FXServer/server-data/server.cfg https://thepochz.xyz/Scripts/server.cfg
